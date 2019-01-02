@@ -1,0 +1,70 @@
+{
+  "name": "blog",
+  "description": "Blog of Software Engineer, Loizos Kounios",
+  "author": "Loizos Kounios <louis@cergos.io> (https://cergos.io)",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/loizoskounios/blog#readme",
+  "keywords": [
+    "blog",
+    "gatsby",
+    "react"
+  ],
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "eslint . --ext .js,.jsx",
+    "serve": "gatsby serve",
+    "start": "npm run develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "core-js": "^2.6.1",
+    "gatsby": "^2.0.80",
+    "gatsby-plugin-catch-links": "^2.0.9",
+    "gatsby-plugin-manifest": "^2.0.13",
+    "gatsby-plugin-offline": "^2.0.20",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-plugin-typography": "^2.2.4",
+    "gatsby-remark-autolink-headers": "^2.0.12",
+    "gatsby-remark-copy-linked-files": "^2.0.8",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-prismjs": "^3.2.0",
+    "gatsby-remark-smartypants": "^2.0.7",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.18",
+    "normalize.css": "^8.0.1",
+    "prism-solarized-dark": "^1.0.1",
+    "prismjs": "^1.15.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-sizeme": "^2.5.2",
+    "react-typography": "^0.16.18",
+    "styled-components": "^4.1.3",
+    "trianglify": "git://github.com/loizoskounios/trianglify.git#master",
+    "typeface-fira-mono": "0.0.54",
+    "typeface-lato": "0.0.54",
+    "typeface-spectral": "0.0.54",
+    "typography": "^0.16.18"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loizoskounios/blog"
+  },
+  "license": "MIT"
+}
