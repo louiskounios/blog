@@ -134,6 +134,15 @@ const ContentContainer = styled.div`
     border-left: 0.25em solid #0098bf;
   }
 
+  & video {
+    width: 100%;
+
+    margin: 0 auto ${rhythm(0.8)} auto;
+    ${media.phone`
+      margin-bottom ${rhythm(0.6)};
+    `}
+  }
+
   & > :last-child {
     margin-bottom: 0;
   }
