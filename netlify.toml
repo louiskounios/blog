@@ -1,0 +1,14 @@
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+
+[[redirects]]
+  from = "https://festive-brown-ef0128.netlify.com/*"
+  to = "https://cergos.io/:splat"
+  status = 301
+  force = true
