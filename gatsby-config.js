@@ -69,5 +69,32 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline', // Must be loaded after `gatsby-plugin-manifest`
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                url
+              }
+            }
+
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map(edge => ({
+          url: `${site.siteMetadata.url}${edge.node.path}`,
+          changefreq: 'daily',
+          priority: 0.7,
+        })),
+      },
+    },
   ],
 };
