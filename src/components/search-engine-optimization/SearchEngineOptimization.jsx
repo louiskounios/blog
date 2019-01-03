@@ -29,6 +29,7 @@ class SearchEngineOptimization extends React.Component {
     const {
       article,
       defaultTitle,
+      googleSiteVerificationCode,
       siteUrl,
       titleTemplate,
     } = this.props;
@@ -40,6 +41,8 @@ class SearchEngineOptimization extends React.Component {
           title={this.seo.title}
           titleTemplate={titleTemplate}
         >
+          <meta name="google-site-verification" content={googleSiteVerificationCode} />
+
           <meta name="author" content={this.seo.author} />
           <meta name="description" content={this.seo.description} />
 
@@ -65,6 +68,7 @@ SearchEngineOptimization.propTypes = {
   defaultAuthor: PropTypes.string.isRequired,
   description: PropTypes.string,
   defaultDescription: PropTypes.string.isRequired,
+  googleSiteVerificationCode: PropTypes.string.isRequired,
   siteUrl: PropTypes.string.isRequired,
   slug: PropTypes.string,
   title: PropTypes.string,
@@ -88,6 +92,7 @@ const query = graphql`
         defaultDescription: description
         defaultTitle: title
         siteUrl: url
+        googleSiteVerificationCode
         titleTemplate
       }
     }
