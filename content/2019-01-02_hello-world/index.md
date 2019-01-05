@@ -4,7 +4,10 @@ date: "2019-01-02"
 summary: "My first, and hopefully not last, blog post."
 ---
 
+!["Hello, World" in Emojicode](images/hello-world-emojicode.png "\"Hello, World\" in Emojicode.")
+
 Hello, everyone.
+
 My name is Loizos Kounios, but everyone calls me "Louis".
 I'm a Software Engineer living in the small island of Cyprus.
 This is my first post – I have finally started the blog I've always been meaning start.
@@ -53,8 +56,8 @@ A demo site showcasing Trianglify is available [here](https://trianglify.io).
 Posts are written in Markdown and converted to HTML using [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) which uses [remark](https://remark.js.org) under the hood. Code blocks are handled by [Prism](https://prismjs.com) with Solarized Dark as the [theme](https://github.com/michaeljdeeb/prism-solarized-dark).
 
 For typefaces, I'm using
-* [Spectral](https://fonts.google.com/specimen/Spectral) as my main font (serif);
-* [Lato](https://fonts.google.com/specimen/Lato) as my secondary font used on headings, buttons, etc (sans-serif);
+* [Crimson Text](https://fonts.google.com/specimen/Crimson+Text) as my main font (serif);
+* [Raleway](https://fonts.google.com/specimen/Raleway) as my secondary font used on headings, buttons, etc (sans-serif);
 * [Fira Mono](https://fonts.google.com/specimen/Fira+Mono) as the monospace font used in code blocks and inline code.
 
 As a substitute for people telling me how bad my code is, I'm using [ESLint](https://eslint.org) with the [Airbnb ruleset](https://www.npmjs.com/package/eslint-config-airbnb).

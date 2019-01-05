@@ -4,6 +4,8 @@ date: "2019-01-03"
 summary: "Using Python to develop a very simple CLI that flattens a directory's structure without overwriting files when filename clashes occur."
 ---
 
+![Road roller flattening](images/flatten.jpg "Photo by PIRO4D on pixabay.")
+
 A few weeks ago, a friend was going through some old junk he had at home and stumbled upon a couple of old hard drives.
 In those hard drives, there were a few directories that included an enormous amount of files.
 A large portion of the files were in the top directory, but other files were deeply nested.
@@ -13,16 +15,17 @@ What was more irritating was that some files had the same filename but different
 So, my friend called me and asked me how he could deal with this.
 Basically, he wanted an easy way to navigate the contents of the directory without going through all the nesting.
 He also didn't want to change the original filenames too much.
-Although I was positive that no existing tool would achieve this, ever since I found out that there's [a website you can use to deliver a potato as a gift to someone](https://potatoparcel.com), my world view has changed.
-Back to the topic at hand, this was actually [incredibly easy to achieve on Windows by leveraging the search GUI](https://superuser.com/a/523854).
+Although I was positive that no existing tool would achieve this, ever since I found out that there's [a website you can use to deliver a potato as a gift to someone](https://potatoparcel.com), my world view has never been the same.
+Anyway, this was actually [incredibly easy to achieve on Windows by leveraging the search GUI](https://superuser.com/a/523854).
 My friend was on Windows, so problem solved.
 
 But this whole thing piqued my curiosity.
 Has anyone else created a command-line-only solution for this before?
-Yes – turns out that there's an amazing `go` tool called [`flatten`](https://github.com/goggle/flatten) that solves the issue.
-And here I was imagining that I had a unique issue on my hands.
+As a matter of fact, yes.
+There's [this amazing `go` tool called `flatten`](https://github.com/goggle/flatten) that solves the issue.
+And here I was imagining that I had a unique problem on my hands.
 
-<video autoplay loop muted>
+<video autoplay controls loop muted>
   <source src="https://media.giphy.com/media/Jq7y34Hgfy01y/giphy.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
@@ -131,12 +134,12 @@ For this we need:
 
 ```python
 # Returns a zero-padded counter suffix.
-def counter_suffix(current, max):
-    return '_' + str(current).zfill(len(str(max)))
+def counter_suffix(current, total):
+    return '_' + str(current).zfill(len(str(total)))
 ```
 
 If we have ten files with the filename `file.jpg` and we're currently processing the third of those files, the function call will be `counter_suffix(3, 10)` and the returned value will be `_03`.
-If 100 files shared a filename, the returned value would be `_003`.
+If a hundred files shared a filename, the returned value would be `_003`.
 And so forth.
 
 ### Renaming the Files
@@ -187,12 +190,12 @@ Here, I'm putting all the previous parts together to create a very simple Python
 
 ```python
 #!/usr/local/bin/python3
-
-# Script that flattens a directory without overwriting files that share a name.
-# Takes absolute path to directory as input.
 #
-# All files in any subdirectory of the user-provided directory, regardless of
-# depth, are moved to the user-provided directory. When filenames clash,
+# Script that flattens a directory without overwriting files that share a
+# name. Takes absolute path to directory as input.
+#
+# All files in any subdirectory of the user-provided directory, regardless
+# of depth, are moved to the user-provided directory. When filenames clash,
 # special care is taken by adding a counter to the filename (e.g., '_001').
 #
 # Linux only. Tested only on Python 3.7. Minimum version is 3.6.
@@ -266,8 +269,8 @@ def _suffix(path):
 
 
 # Returns a zero-padded counter suffix.
-def _counter_suffix(current, max):
-    return '_' + str(current).zfill(len(str(max)))
+def _counter_suffix(current, total):
+    return '_' + str(current).zfill(len(str(total)))
 
 
 def _rename_files(top_dir):
@@ -289,9 +292,9 @@ def _rename_files(top_dir):
             continue
 
         # Since we are renaming the top directory file _and_ any files with
-        # the same file in any subdirectory, we can just loop over all files
-        # and move them to the top directory with a running counter added to
-        # their filename to ensure uniqueness.
+        # the same file in any subdirectory, we can just loop over all
+        # files and move them to the top directory with a running counter
+        # added to their filename to ensure uniqueness.
         for idx, path in enumerate(paths, start=1):
             base_name = _suffixless_name(path)
             suffix = _suffix(path)
@@ -303,7 +306,7 @@ def _rename_files(top_dir):
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
-        print('Need exactly one argument: the absolute path to the directory')
+        print('Need one arg: the absolute path to the directory')
         sys.exit(1)
 
     path = pathlib.Path(sys.argv[1])
