@@ -14,8 +14,9 @@ const Container = styled.nav`
   margin-top: ${rhythm(1.8)};
   z-index: 3;
 
-  font-family: Lato, sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 300;
+  font-size: 0.9rem;
 
   color: rgb(255, 255, 255);
 `;

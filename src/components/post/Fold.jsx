@@ -22,7 +22,7 @@ const FoldContainer = styled.div`
         0px -1px 10px 0px rgba(0, 0, 0, 0.12);
     `}
 
-  font-family: Lato, sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 300;
   text-align: center;
 

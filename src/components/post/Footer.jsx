@@ -8,8 +8,8 @@ import Fold from './Fold';
 const Container = styled.div`
   padding: ${rhythm(0.4)} 0;
 
-  font-family: Lato, sans-serif;
-  font-size: 1rem;
+  font-family: Raleway, sans-serif;
+  font-size: 0.9rem;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;

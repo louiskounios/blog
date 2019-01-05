@@ -10,7 +10,7 @@ const Button = styled.button`
   `}
   padding: ${rhythm(0.3)} ${rhythm(0.5)};
   ${media.phone`
-    padding: ${rhythm(0.7)} ${rhythm(0.3)};
+    padding: ${rhythm(0.5)} ${rhythm(0.3)};
   `}
   margin: 0 ${rhythm(0.1)};
   z-index: 3;
@@ -21,8 +21,7 @@ const Button = styled.button`
   box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14),
     0px 3px 3px -2px rgba(0, 0, 0, 0.12);
 
-  font-family: Lato, sans-serif;
-  font-size: 1rem;
+  font-family: Raleway, sans-serif;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;

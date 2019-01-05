@@ -19,8 +19,8 @@ const Container = styled.footer`
   box-shadow: 0px -1px 3px 0px rgba(0, 0, 0, 0.2), 0px -1px 1px 0px rgba(0, 0, 0, 0.14),
     0px -2px 1px -1px rgba(0, 0, 0, 0.12);
 
-  font-family: Lato, sans-serif;
-  font-size: 0.9rem;
+  font-family: Raleway, sans-serif;
+  font-size: 0.75rem;
   font-weight: 300;
   text-align: center;
   word-spacing: ${rhythm(0.05)};

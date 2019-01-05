@@ -11,7 +11,7 @@ const MainContent = styled.main`
   ${media.phone`
     margin-bottom: ${rhythm(1.2)};
   `}
-  max-width: 800px;
+  max-width: 780px;
   z-index: 2;
 `;
 
