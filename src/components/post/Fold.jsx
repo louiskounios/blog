@@ -17,12 +17,8 @@ const FoldContainer = styled.div`
 
   background: rgb(255, 255, 255);
   color: rgba(0, 0, 0, 0.9);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-  ${props => props.bottom
-    && css`
-      border: unset;
-      border-top: 1px solid rgba(0, 0, 0, 0.5);
-    `}
 
   font-family: Raleway, sans-serif;
   font-size: 0.9rem;

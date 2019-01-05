@@ -15,7 +15,7 @@ const Title = styled.h1`
   margin: 0;
   margin-bottom: ${rhythm(0.3)};
 
-  color: ${props => (props.dark ? 'rgba(255, 255, 255, 0.9)' : 'color: rgba(0, 0, 0, 0.9)')};
+  color: ${props => (props.dark ? 'color: rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)')};
 
   font-size: 1.65rem;
   font-weight: inherit;
@@ -24,7 +24,7 @@ const Title = styled.h1`
 const StyledTime = styled.span`
   margin: 0;
 
-  color: ${props => (props.dark ? 'rgba(255, 255, 255, 0.7)' : 'color: rgba(0, 0, 0, 0.7)')};
+  color: ${props => (props.dark ? 'color: rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.7)')};
 
   font-size: 1.1rem;
   font-weight: inherit;
