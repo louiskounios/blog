@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { navigate } from 'gatsby';
 import styled, { css } from 'styled-components';
 
+import { rhythm } from 'styling/typography';
+
 const FoldContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,24 +12,36 @@ const FoldContainer = styled.div`
   justify-content: center;
 
   width: 100%;
+  padding: ${rhythm(0.4)};
   z-index: 4;
 
-  background: rgb(54, 89, 122);
-  color: rgb(255, 255, 255);
-  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  background: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   ${props => props.bottom
     && css`
-      box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2), 0px -4px 5px 0px rgba(0, 0, 0, 0.14),
-        0px -1px 10px 0px rgba(0, 0, 0, 0.12);
+      border: unset;
+      border-top: 1px solid rgba(0, 0, 0, 0.5);
     `}
 
   font-family: Raleway, sans-serif;
+  font-size: 0.9rem;
   font-weight: 300;
   text-align: center;
+  text-transform: uppercase;
 
   ${props => props.interactive
     && css`
+      background: rgb(54, 89, 122);
+      color: rgb(255, 255, 255);
+      border: unset;
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+      ${props.bottom && css`
+        box-shadow: 0px -2px 4px -1px rgba(0, 0, 0, 0.2), 0px -4px 5px 0px rgba(0, 0, 0, 0.14),
+          0px -1px 10px 0px rgba(0, 0, 0, 0.12);
+      `}
+
       cursor: pointer;
       user-select: none;
 

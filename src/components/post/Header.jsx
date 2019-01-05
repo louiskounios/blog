@@ -6,14 +6,16 @@ import { rhythm } from 'styling/typography';
 import Fold from './Fold';
 
 const Container = styled.div`
-  padding: ${rhythm(1.5)} ${rhythm(2)};
+  padding: ${rhythm(1)};
+
+  text-transform: none;
 `;
 
 const Title = styled.h1`
   margin: 0;
   margin-bottom: ${rhythm(0.3)};
 
-  color: rgb(255, 255, 255);
+  color: ${props => (props.dark ? 'rgba(255, 255, 255, 0.9)' : 'color: rgba(0, 0, 0, 0.9)')};
 
   font-size: 1.65rem;
   font-weight: inherit;
@@ -22,18 +24,18 @@ const Title = styled.h1`
 const StyledTime = styled.span`
   margin: 0;
 
-  color: rgb(212, 212, 212);
+  color: ${props => (props.dark ? 'rgba(255, 255, 255, 0.7)' : 'color: rgba(0, 0, 0, 0.7)')};
 
   font-size: 1.1rem;
   font-weight: inherit;
 `;
 
 const Time = (props) => {
-  const { datetime, children } = props;
+  const { datetime, children, dark } = props;
 
   return (
     <time dateTime={datetime}>
-      <StyledTime>{children}</StyledTime>
+      <StyledTime dark={dark}>{children}</StyledTime>
     </time>
   );
 };
@@ -41,16 +43,22 @@ const Time = (props) => {
 Time.propTypes = {
   datetime: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
+  dark: PropTypes.bool.isRequired,
 };
 
 const Header = (props) => {
-  const { date, mrDate, title } = props;
+  const {
+    date,
+    interactive,
+    mrDate,
+    title,
+  } = props;
 
   return (
     <Fold {...props}>
       <Container>
-        <Title>{title}</Title>
-        <Time datetime={mrDate}>{date}</Time>
+        <Title dark={!interactive}>{title}</Title>
+        <Time dark={!interactive} datetime={mrDate}>{date}</Time>
       </Container>
     </Fold>
   );

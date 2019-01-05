@@ -7,9 +7,9 @@ import { rhythm } from 'styling/typography';
 
 const ContentContainer = styled.div`
   width: 100%;
-  padding: ${rhythm(1.6)} ${rhythm(2)};
+  padding: ${rhythm(1.2)} ${rhythm(2)};
   ${media.phone`
-    padding: ${rhythm(1.3)} ${rhythm(0.8)};
+    padding: ${rhythm(0.8)} ${rhythm(0.8)};
   `}
 
   z-index: 3;

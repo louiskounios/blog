@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import media from 'styling/media';
 import { rhythm } from 'styling/typography';
 import Content from './Content';
-import Footer from './Footer';
+import Fold from './Fold';
 import Header from './Header';
 
 const PostContainer = styled.article`
@@ -54,9 +54,9 @@ const Post = (props) => {
         {summary && <p>{summary}</p>}
       </Content>
 
-      <Footer slug={slug || '/'}>
+      <Fold bottom interactive slug={slug || '/'}>
         {summary ? 'Read More' : 'Back Home'}
-      </Footer>
+      </Fold>
     </PostContainer>
   );
 };
