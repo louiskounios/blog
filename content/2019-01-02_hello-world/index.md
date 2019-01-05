@@ -76,7 +76,3 @@ Another alternative I found is [Utterances](https://utteranc.es) which essential
 I'll keep digging.
 
 Lastly, I'm planning on improving how the blog looks and feels, especially on mobile as I don't feel I spent the appropriate amount of time on that task.
-
-___
-
-`return 0`

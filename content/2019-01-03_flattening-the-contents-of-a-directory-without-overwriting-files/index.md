@@ -312,7 +312,3 @@ if __name__ == '__main__':
 ```
 
 Save this file as `flatten.py`, make it executable (`chmod +x flatten.py`) and run it by providing an absolute path to the directory to be flattened as the first argument (e.g., `./flatten.py /home/louis/messy-dir`).
-
----
-
-`return 0`
