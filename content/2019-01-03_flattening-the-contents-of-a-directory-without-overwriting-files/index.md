@@ -4,8 +4,6 @@ date: "2019-01-03"
 summary: "Using Python to develop a very simple CLI that flattens a directory's structure without overwriting files when filename clashes occur."
 ---
 
-![Road roller flattening](images/flatten.jpg "Photo by PIRO4D on pixabay.")
-
 A few weeks ago, a friend was going through some old junk he had at home and stumbled upon a couple of old hard drives.
 In those hard drives, there were a few directories that included an enormous amount of files.
 A large portion of the files were in the top directory, but other files were deeply nested.
