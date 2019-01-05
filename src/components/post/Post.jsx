@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import media from 'styling/media';
 import { rhythm } from 'styling/typography';
+import Comments from './Comments';
 import Content from './Content';
 import Fold from './Fold';
 import Header from './Header';
@@ -53,6 +54,7 @@ const Post = (props) => {
       <Content html={html}>
         {summary && <p>{summary}</p>}
       </Content>
+      {html && <Comments />}
 
       <Fold bottom interactive slug={slug || '/'}>
         {summary ? 'Read More' : 'Back Home'}
