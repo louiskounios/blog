@@ -15,6 +15,7 @@ const Title = styled.h1`
 
   color: rgb(255, 255, 255);
 
+  font-size: 1.65rem;
   font-weight: inherit;
 `;
 
