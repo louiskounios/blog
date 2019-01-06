@@ -22,23 +22,23 @@ It is [open source](https://github.com/utterance/utterances) and even comes with
 I have already integrated it on this site and can confirm that the entire process is completely painless.
 Here is the list of steps I had to take to set it up.
 
-### Created Public GitHub Repository
+### Create Public GitHub Repository
 
 The first step was to create a public GitHub repository for housing my blog's comments ([here](https://github.com/loizoskounios/blog-comments-tracker)).
 
 ![Repository](images/repository.png)
 
-### Installed Utterances App
+### Install Utterances App
 
 Then I had to install the [Utterances GitHub app](https://github.com/apps/utterances) to the repository I created above.
 
 ![Utterances installation](images/utterances-installation.png)
 
-### Generated Script Tag
+### Generate Script Tag
 
-I then used the [configuration section on the Utterances website](https://utteranc.es#configuration) to generate the script tag that would later load on my blog. The script in my case was the following:
+I then used the [configuration section on the Utterances website](https://utteranc.es#configuration) to generate the script tag that I would later load on my blog. The script tag in my case was the following:
 
-```javascript
+```html
 <script src="https://utteranc.es/client.js"
         repo="loizoskounios/blog-comments-tracker"
         issue-term="title"
@@ -48,7 +48,7 @@ I then used the [configuration section on the Utterances website](https://uttera
 </script>
 ```
 
-### Loaded the Script
+### Load Script
 
 All that was left was for me to load the script into my Gatsby blog.
 Luckily, it was fairly easy to set this up in React.
