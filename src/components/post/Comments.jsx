@@ -36,7 +36,7 @@ class Comments extends React.Component {
     scriptEl.async = true;
     scriptEl.src = 'https://utteranc.es/client.js';
     scriptEl.setAttribute('repo', commentsRepository);
-    scriptEl.setAttribute('issue-term', 'title');
+    scriptEl.setAttribute('issue-term', 'pathname');
     scriptEl.setAttribute('theme', 'github-light');
     scriptEl.setAttribute('crossorigin', 'anonymous');
     this.commentsEl.current.appendChild(scriptEl);
