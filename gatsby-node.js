@@ -65,27 +65,12 @@ exports.createPages = ({ graphql, actions }) => {
       // Create list for paginated list of content.
       const postsPerPage = 5;
       const numPages = Math.ceil(posts.length / postsPerPage);
-      const blogListComponentPath = `${__dirname}/src/templates/BlogList.jsx`;
+      const blogListComponentPath = path.resolve(`${__dirname}/src/templates/BlogList.jsx`);
 
-      // The first / index page is a special case because we want it to exist
-      // at both `/` and `/pages/1`.
-      Array.from(['/', '/pages/1']).forEach((pagePath) => {
+      for (let i = 0; i < numPages; i += 1) {
         createPage({
-          path: pagePath,
-          component: path.resolve(blogListComponentPath),
-          context: {
-            numPages,
-            limit: postsPerPage,
-            skip: 0,
-            currentPage: 1,
-          },
-        });
-      });
-
-      for (let i = 1; i < numPages; i += 1) {
-        createPage({
-          path: `/pages/${i + 1}`,
-          component: path.resolve(blogListComponentPath),
+          path: i === 0 ? '/' : `/pages/${i + 1}`,
+          component: blogListComponentPath,
           context: {
             numPages,
             limit: postsPerPage,
