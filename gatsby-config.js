@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: 'Loizos Kounios',
     commentsRepository: 'loizoskounios/blog-comments-tracker',
-    copyright: '2019',
+    copyright: '2019–2020',
     description: 'Blog of Software Engineer, Loizos Kounios',
     googleSiteVerificationCode: 'qE1qvfEFHJDkbM1_v1oO_c1HWRf_owWzmF6KfwizcOc',
     repository: 'https://github.com/loizoskounios/blog',
