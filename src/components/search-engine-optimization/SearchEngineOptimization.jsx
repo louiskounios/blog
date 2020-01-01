@@ -91,7 +91,7 @@ const query = graphql`
         defaultAuthor: author
         defaultDescription: description
         defaultTitle: title
-        siteUrl: url
+        siteUrl
         googleSiteVerificationCode
         titleTemplate
       }

@@ -6,9 +6,9 @@ module.exports = {
     description: 'Blog of Software Engineer, Loizos Kounios',
     googleSiteVerificationCode: 'qE1qvfEFHJDkbM1_v1oO_c1HWRf_owWzmF6KfwizcOc',
     repository: 'https://github.com/loizoskounios/blog',
+    siteUrl: 'https://cergos.io',
     title: 'Blog | Loizos Kounios',
     titleTemplate: '%s | Blog | Loizos Kounios',
-    url: 'https://cergos.io',
   },
   plugins: [
     'gatsby-plugin-sharp',
@@ -69,15 +69,14 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
-    'gatsby-plugin-offline', // Must be loaded after `gatsby-plugin-manifest`
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: 'gatsby-plugin-sitemap', // Must be loaded after `gatsby-plugin-manifest`.
       options: {
         query: `
           {
             site {
               siteMetadata {
-                url
+                siteUrl
               }
             }
 
@@ -91,7 +90,7 @@ module.exports = {
           }
         `,
         serialize: ({ site, allSitePage }) => allSitePage.edges.map(edge => ({
-          url: `${site.siteMetadata.url}${edge.node.path}`,
+          url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
           changefreq: 'daily',
           priority: 0.7,
         })),
