@@ -49,6 +49,7 @@ module.exports = {
               linkImagesToOriginal: true,
               maxWidth: 780,
               showCaptions: true,
+              markdownCaptions: true,
               quality: 50,
               withWebp: true,
             },
