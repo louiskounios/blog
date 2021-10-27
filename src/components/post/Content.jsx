@@ -80,7 +80,8 @@ const ContentContainer = styled.div`
   & .gatsby-resp-image-figcaption {
     margin: ${rhythm(0.4)} ${rhythm(1.5)} 0 ${rhythm(1.5)};
 
-    font-size: 0.95rem;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 0.8rem;
     font-style: italic;
     text-align: center;
   }
