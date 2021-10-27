@@ -65,14 +65,14 @@ class Fold extends React.Component {
 
   handleClick() {
     const { slug } = this.props;
-    navigate(slug);
+    navigate("/" + slug);
   }
 
   handleKeyPress(e) {
     const { slug } = this.props;
     const code = e.charCode || e.keyCode;
     if (code === 13 || code === 32) {
-      navigate(slug);
+      navigate("/" + slug);
     }
   }
 
