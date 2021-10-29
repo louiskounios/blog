@@ -47,7 +47,7 @@ const Post = (props) => {
         date={date}
         interactive={summary !== undefined}
         mrDate={mrDate}
-        slug={slug}
+        slug={slug ? '/' + slug : '/'}
         title={title}
       />
 
@@ -56,7 +56,7 @@ const Post = (props) => {
       </Content>
       {html && <Comments />}
 
-      <Fold bottom interactive slug={slug || '/'}>
+      <Fold bottom interactive slug={slug ? '/' + slug : '/'}>
         {summary ? 'Read More' : 'Back Home'}
       </Fold>
     </PostContainer>
