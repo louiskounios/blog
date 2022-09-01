@@ -8,7 +8,7 @@ summary: "My first, and hopefully not last, blog post."
 
 Hello, everyone.
 
-My name is Loizos Kounios, but everyone calls me "Louis".
+My name is Louis Kounios.
 I'm a Software Engineer living in the small island of Cyprus.
 This is my first post – I have finally started the blog I've always been meaning start.
 

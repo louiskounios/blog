@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    author: 'Loizos Kounios',
+    author: 'Louis Kounios',
     commentsRepository: 'louiskounios/blog-comments-tracker',
     copyright: '2019–2022',
-    description: 'Blog of Software Engineer, Loizos Kounios',
+    description: 'Blog of Software Engineer, Louis Kounios',
     googleSiteVerificationCode: 'qE1qvfEFHJDkbM1_v1oO_c1HWRf_owWzmF6KfwizcOc',
     repository: 'https://github.com/louiskounios/blog',
     siteUrl: 'https://cergos.io',
-    title: 'Blog | Loizos Kounios',
-    titleTemplate: '%s | Blog | Loizos Kounios',
+    title: 'Blog | Louis Kounios',
+    titleTemplate: '%s | Blog | Louis Kounios',
   },
   plugins: [
     'gatsby-plugin-sharp',
@@ -61,7 +61,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Loizos Kounios – Blog',
+        name: 'Louis Kounios – Blog',
         short_name: 'LKounios',
         start_url: '/?app=1',
         background_color: '#36597a',

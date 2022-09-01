@@ -1,7 +1,7 @@
 {
   "name": "blog",
-  "description": "Blog of Software Engineer, Loizos Kounios",
-  "author": "Loizos Kounios <louis@cergos.io> (https://cergos.io)",
+  "description": "Blog of Software Engineer, Louis Kounios",
+  "author": "Louis Kounios <louis@cergos.io> (https://cergos.io)",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://github.com/louiskounios/blog#readme",
