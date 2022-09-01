@@ -24,7 +24,7 @@ Here is the list of steps I had to take to set it up.
 
 ### Create Public GitHub Repository
 
-The first step was to create a public GitHub repository for housing my blog's comments ([here](https://github.com/loizoskounios/blog-comments-tracker)).
+The first step was to create a public GitHub repository for housing my blog's comments ([here](https://github.com/louiskounios/blog-comments-tracker)).
 
 ![Repository](images/repository.png)
 
@@ -40,7 +40,7 @@ I then used the [configuration section on the Utterances website](https://uttera
 
 ```html
 <script src="https://utteranc.es/client.js"
-        repo="loizoskounios/blog-comments-tracker"
+        repo="louiskounios/blog-comments-tracker"
         issue-term="title"
         theme="github-light"
         crossorigin="anonymous"
@@ -74,7 +74,7 @@ class Comments extends React.Component {
     scriptEl.onerror = () => this.setState({ status: 'failed' });
     scriptEl.async = true;
     scriptEl.src = 'https://utteranc.es/client.js';
-    scriptEl.setAttribute('repo', 'loizoskounios/blog-comments-tracker');
+    scriptEl.setAttribute('repo', 'louiskounios/blog-comments-tracker');
     scriptEl.setAttribute('issue-term', 'title');
     scriptEl.setAttribute('theme', 'github-light');
     scriptEl.setAttribute('crossorigin', 'anonymous');

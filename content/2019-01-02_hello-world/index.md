@@ -47,7 +47,7 @@ I used a few different technologies to style this site:
 * [styled-components](https://www.styled-components.com) is used for a taste of some sweet CSS-in-JS controversy. Oh, and I used it for styling everything else too.
 
 The header / banner uses [Trianglify](https://github.com/qrohlf/trianglify) to generate a new cool background every time it is re-rendered.
-The version of Trianglify that's used on this site is [my own fork](https://github.com/loizoskounios/trianglify).
+The version of Trianglify that's used on this site is [my own fork](https://github.com/louiskounios/trianglify).
 The fork removes a lot of the rendering functionality provided by the original library.
 I found this to be necessary as Gatsby was not able to bundle static binaries.
 Essentially, the fork makes it so I'm provided with the paths for the background and I use those paths in React to generate an `<svg>` component.
@@ -62,7 +62,7 @@ For typefaces, I'm using
 
 As a substitute for people telling me how bad my code is, I'm using [ESLint](https://eslint.org) with the [Airbnb ruleset](https://www.npmjs.com/package/eslint-config-airbnb).
 
-I have published the source code for this blog under the MIT license on [GitHub](https://github.com/loizoskounios/blog).
+I have published the source code for this blog under the MIT license on [GitHub](https://github.com/louiskounios/blog).
 
 ## The Future
 
